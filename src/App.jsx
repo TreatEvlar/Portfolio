@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {image} from "../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg"
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -248,7 +249,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
+                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Kuldeep Kumar
@@ -287,7 +288,7 @@ const Portfolio = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <div className="w-64 h-64 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
+                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
