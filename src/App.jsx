@@ -4,115 +4,105 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Small projects data
   const smallProjects = [
     {
       id: 1,
-      title: "Weather Dashboard",
-      description:
-        "A clean, responsive weather application that displays current conditions and forecasts for any location.",
-      technologies: ["React", "Weather API", "Chart.js"],
+      title: "E-commerce website",
+      description: "A clean, responsive e-commerce website that showcases modern styles and collections for any season.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       icon: "☀️",
-      link: "#",
+      link: "https://treatevlar.github.io/TreatEvlar/", 
     },
     {
       id: 2,
-      title: "Calculator App",
-      description:
-        "A sleek calculator with basic arithmetic operations and a modern UI design.",
-      technologies: ["React", "CSS", "JavaScript"],
+      title: "Organic serum website",
+      description: "A modern website for an organic serum product, showcasing its benefits and usage.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       icon: "🧮",
-      link: "#",
+      link: "https://treatevlar.github.io/Nector/", 
     },
     {
       id: 3,
-      title: "Note Taking App",
-      description:
-        "A simple note-taking application with local storage persistence.",
-      technologies: ["React", "LocalStorage", "CSS"],
+      title: "Car Service Website",
+      description: "A car service website that allows users to book appointments and manage their vehicle services.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       icon: "📝",
-      link: "#",
+      link: "https://treatevlar.github.io/car-service-website/", 
     },
     {
       id: 4,
-      title: "Password Generator",
-      description:
-        "A secure password generator with customizable length and character types.",
-      technologies: ["React", "JavaScript", "CSS"],
+      title: "Room Cleaning Service",
+      description: "A room cleaning service website that allows users to book cleaning appointments and manage their services.",
+      technologies: ["HTML", "CSS", "JavaScript"],
       icon: "🔐",
-      link: "#",
+      link: "https://treatevlar.github.io/TechWeb/", 
     },
     {
-      id: 1,
-      title: "Weather Dashboard",
-      description:
-        "A clean, responsive weather application that displays current conditions and forecasts for any location.",
-      technologies: ["React", "Weather API", "Chart.js"],
-      icon: "☀️",
-      link: "#",
+      id: 5,
+      title: "Youtube clone",
+      description: "A clone of the popular video-sharing platform with user authentication and video uploads.",
+      technologies: ["React", "TailwindCSS", "JavaScript"],
+      icon: "✅",
+      link: "https://youtube-clone-keqm.onrender.com",
     },
     {
-      id: 2,
-      title: "Calculator App",
-      description:
-        "A sleek calculator with basic arithmetic operations and a modern UI design.",
-      technologies: ["React", "CSS", "JavaScript"],
-      icon: "🧮",
-      link: "#",
+      id: 6,
+      title: "Clothing Website",
+      description: "A modern e-commerce website for showcasing clothing products.",
+      technologies: ["React", "TailwindCSS", "JavaScript"],
+      icon: "💰",
+      link: "https://clothing-website-eqko.onrender.com",
     },
     {
-      id: 3,
-      title: "Note Taking App",
-      description:
-        "A simple note-taking application with local storage persistence.",
-      technologies: ["React", "LocalStorage", "CSS"],
+      id: 7,
+      title: "Gaming Website",
+      description: "A platform for gamers to find and share their favorite games.",
+      technologies: ["React", "TailwindCSS", "JavaScript"],
+      icon: "🍳",
+      link: "https://faits-diarmes.onrender.com",
+    },
+    {
+      id: 8,
+      title: "Blog Platform",
+      description: "A minimalist blogging platform with markdown support.",
+      technologies: ["React", "Markdown", "Firebase"],
       icon: "📝",
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Password Generator",
-      description:
-        "A secure password generator with customizable length and character types.",
-      technologies: ["React", "JavaScript", "CSS"],
-      icon: "🔐",
       link: "#",
     },
   ];
 
-  // Main projects data
   const projects = [
     {
       id: 1,
       title: "E-Commerce Platform",
-      description:
-        "A full-featured online store with shopping cart, user authentication, and payment processing.",
+      description: "A full-featured online store with shopping cart, user authentication, and payment processing.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       icon: "fas fa-shopping-cart",
+      link: "#",
     },
     {
       id: 2,
       title: "Task Management App",
-      description:
-        "A productivity application for managing tasks with drag-and-drop functionality.",
+      description: "A productivity application for managing tasks with drag-and-drop functionality.",
       technologies: ["React", "Redux", "Firebase", "Tailwind CSS"],
       icon: "fas fa-tasks",
+      link: "#",
     },
     {
       id: 3,
       title: "Weather Dashboard",
-      description:
-        "Real-time weather application with forecasts and location-based recommendations.",
+      description: "Real-time weather application with forecasts and location-based recommendations.",
       technologies: ["JavaScript", "API Integration", "Chart.js"],
       icon: "fas fa-cloud-sun",
+      link: "#",
     },
     {
       id: 4,
       title: "Social Media Dashboard",
-      description:
-        "Analytics dashboard for social media metrics with data visualization.",
+      description: "Analytics dashboard for social media metrics with data visualization.",
       technologies: ["React", "D3.js", "Express", "MySQL"],
       icon: "fas fa-chart-line",
+      link: "#",
     },
   ];
 
@@ -257,8 +247,8 @@ const Portfolio = () => {
       <section id="home" className="gradient-bg pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl">
-              <i className="fas fa-user-circle text-6xl text-indigo-600"></i>
+           <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
+                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Kuldeep Kumar
@@ -296,8 +286,8 @@ const Portfolio = () => {
           </h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <div className="w-64 h-64 mx-auto bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full flex items-center justify-center">
-                <i className="fas fa-code text-8xl text-indigo-600"></i>
+              <div className="w-64 h-64 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
+                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
@@ -331,7 +321,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 bg-gray-50">
+      <section id="projects" className="pt-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
             My Projects
@@ -343,61 +333,65 @@ const Portfolio = () => {
 
           {/* Small Projects Section */}
           <div className="max-w-7xl mx-auto">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-          Small Projects & Utilities
-        </h3>
-        
-        {/* Changed grid classes for 2 columns on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {smallProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg h-full flex flex-col"
-            >
-              <div className="p-4 sm:p-6 flex-grow">
-                <div className="flex items-center mb-3">
-                  <span className="text-2xl sm:text-3xl mr-2 sm:mr-3">{project.icon}</span>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">
-                    {project.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 mb-4 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="px-4 sm:px-6 pb-4">
-                <a
-                  href={project.link}
-                  className="text-indigo-600 font-medium hover:text-indigo-700 text-sm inline-flex items-center transition-colors duration-300"
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+              Small Projects & Utilities
+            </h3>
+
+            {/* Changed grid classes for 2 columns on mobile */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {smallProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg h-full flex flex-col"
                 >
-                  View Project <span className="ml-1">→</span>
-                </a>
-              </div>
+                  <div className="p-4 sm:p-6 flex-grow">
+                    <div className="flex items-center mb-3">
+                      <span className="text-2xl sm:text-3xl mr-2 sm:mr-3">
+                        {project.icon}
+                      </span>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-800">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 mb-4 text-sm">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+                      {project.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="px-4 sm:px-6 pb-4">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-indigo-600 font-medium hover:text-indigo-700 text-sm inline-flex items-center transition-colors duration-300"
+                    >
+                      View Project <span className="ml-1">→</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
           {/* Main Projects Section */}
           <div className="mb-16 mt-10">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              Major Projects & Utilities
+              Major Projects
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="project-card bg-white rounded-xl shadow-md overflow-hidden"
+                  className="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <div className="p-6">
                     <div className="text-indigo-600 text-3xl mb-4">
@@ -418,7 +412,9 @@ const Portfolio = () => {
                       ))}
                     </div>
                     <a
-                      href="#"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-indigo-600 font-medium hover:text-indigo-700 inline-flex items-center"
                     >
                       View Project <i className="fas fa-arrow-right ml-2"></i>
