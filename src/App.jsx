@@ -1,9 +1,35 @@
-import React, { useState } from "react";
-import {image} from "../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg"
+import React, { useState, useRef } from "react";
+import { FaShoppingCart, FaWrench, FaYoutube, FaGamepad } from "react-icons/fa";
+import { GiSpiralBottle, GiClothes } from "react-icons/gi";
+import { MdCleaningServices } from "react-icons/md";
+import { SiCoinmarketcap } from "react-icons/si";
+import emailjs from "@emailjs/browser";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_w4ym21o",
+        "template_z4v9xeq",
+        form.current,
+        "iBOcl7pNFCvGyrtUC"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Oops, something went wrong.", error.text);
+        }
+      );
+  };
 
   const smallProjects = [
     {
@@ -11,7 +37,7 @@ const Portfolio = () => {
       title: "E-commerce website",
       description: "A clean, responsive e-commerce website that showcases modern styles and collections for any season.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      icon: "☀️",
+      icon: <FaShoppingCart />,
       link: "https://treatevlar.github.io/TreatEvlar/", 
     },
     {
@@ -19,7 +45,7 @@ const Portfolio = () => {
       title: "Organic serum website",
       description: "A modern website for an organic serum product, showcasing its benefits and usage.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      icon: "🧮",
+      icon: <GiSpiralBottle />,
       link: "https://treatevlar.github.io/Nector/", 
     },
     {
@@ -27,7 +53,7 @@ const Portfolio = () => {
       title: "Car Service Website",
       description: "A car service website that allows users to book appointments and manage their vehicle services.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      icon: "📝",
+      icon: <FaWrench />,
       link: "https://treatevlar.github.io/car-service-website/", 
     },
     {
@@ -35,7 +61,7 @@ const Portfolio = () => {
       title: "Room Cleaning Service",
       description: "A room cleaning service website that allows users to book cleaning appointments and manage their services.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      icon: "🔐",
+      icon: <MdCleaningServices />,
       link: "https://treatevlar.github.io/TechWeb/", 
     },
     {
@@ -43,7 +69,7 @@ const Portfolio = () => {
       title: "Youtube clone",
       description: "A clone of the popular video-sharing platform with user authentication and video uploads.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
-      icon: "✅",
+      icon: <FaYoutube />,
       link: "https://youtube-clone-keqm.onrender.com",
     },
     {
@@ -51,7 +77,7 @@ const Portfolio = () => {
       title: "Clothing Website",
       description: "A modern e-commerce website for showcasing clothing products.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
-      icon: "💰",
+      icon: <GiClothes />,
       link: "https://clothing-website-eqko.onrender.com",
     },
     {
@@ -59,16 +85,16 @@ const Portfolio = () => {
       title: "Gaming Website",
       description: "A platform for gamers to find and share their favorite games.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
-      icon: "🍳",
+      icon: <FaGamepad />,
       link: "https://faits-diarmes.onrender.com",
     },
     {
       id: 8,
-      title: "Blog Platform",
-      description: "A minimalist blogging platform with markdown support.",
-      technologies: ["React", "Markdown", "Firebase"],
-      icon: "📝",
-      link: "#",
+      title: "Marketing Website",
+      description: "marketing website for a digital marketing agency",
+      technologies: ["React", "TailwindCSS", "JavaScript"],
+      icon: <SiCoinmarketcap />,
+      link: "https://george-lambert.onrender.com",
     },
   ];
 
@@ -249,7 +275,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
+                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Kuldeep Kumar
@@ -288,7 +314,7 @@ const Portfolio = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <div className="w-64 h-64 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
+                <img src="../src/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg" alt="Profile" class="w-full h-full object-cover"/>
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
@@ -347,7 +373,7 @@ const Portfolio = () => {
                 >
                   <div className="p-4 sm:p-6 flex-grow">
                     <div className="flex items-center mb-3">
-                      <span className="text-2xl sm:text-3xl mr-2 sm:mr-3">
+                      <span className="text-2xl sm:text-3xl mr-2 sm:mr-3 p-2">
                         {project.icon}
                       </span>
                       <h3 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -473,56 +499,32 @@ const Portfolio = () => {
 
           <div className="flex flex-col md:flex-row gap-12">
             <div className="md:w-1/2">
-              <form className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="mb-6">
-                  <label
-                    htmlFor="name"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Your Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
+              <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg">
+      <div className="mb-6">
+        <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+          Your Name
+        </label>
+        <input type="text" name="name" id="name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required />
+      </div>
+
+      <div className="mb-6">
+        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+          Email Address
+        </label>
+        <input type="email" name="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required />
+      </div>
+
+      <div className="mb-6">
+        <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+          Your Message
+        </label>
+        <textarea name="message" id="message" rows="5" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required></textarea>
+      </div>
+
+      <button type="submit" className="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+        Send Message
+      </button>
+    </form>
             </div>
 
             <div className="md:w-1/2 text-white">
