@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
-import { FaShoppingCart, FaWrench, FaYoutube, FaGamepad } from "react-icons/fa";
+import { FaShoppingCart, FaWrench, FaYoutube, FaGamepad, FaGithub, FaLinkedinIn, FaTwitter, FaDribbble } from "react-icons/fa";
 import { GiSpiralBottle, GiClothes } from "react-icons/gi";
 import { MdCleaningServices } from "react-icons/md";
 import { SiCoinmarketcap } from "react-icons/si";
 import emailjs from "@emailjs/browser";
-import image from "./image/20e0b5fc-30fb-4090-a325-5ee596dca91e.jpeg";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,39 +35,44 @@ const Portfolio = () => {
     {
       id: 1,
       title: "E-commerce website",
-      description: "A clean, responsive e-commerce website that showcases modern styles and collections for any season.",
+      description:
+        "A clean, responsive e-commerce website that showcases modern styles and collections for any season.",
       technologies: ["HTML", "CSS", "JavaScript"],
       icon: <FaShoppingCart />,
-      link: "https://treatevlar.github.io/TreatEvlar/", 
+      link: "https://treatevlar.github.io/TreatEvlar/",
     },
     {
       id: 2,
       title: "Organic serum website",
-      description: "A modern website for an organic serum product, showcasing its benefits and usage.",
+      description:
+        "A modern website for an organic serum product, showcasing its benefits and usage.",
       technologies: ["HTML", "CSS", "JavaScript"],
       icon: <GiSpiralBottle />,
-      link: "https://treatevlar.github.io/Nector/", 
+      link: "https://treatevlar.github.io/Nector/",
     },
     {
       id: 3,
       title: "Car Service Website",
-      description: "A car service website that allows users to book appointments and manage their vehicle services.",
+      description:
+        "A car service website that allows users to book appointments and manage their vehicle services.",
       technologies: ["HTML", "CSS", "JavaScript"],
       icon: <FaWrench />,
-      link: "https://treatevlar.github.io/car-service-website/", 
+      link: "https://treatevlar.github.io/car-service-website/",
     },
     {
       id: 4,
       title: "Room Cleaning Service",
-      description: "A room cleaning service website that allows users to book cleaning appointments and manage their services.",
+      description:
+        "A room cleaning service website that allows users to book cleaning appointments and manage their services.",
       technologies: ["HTML", "CSS", "JavaScript"],
       icon: <MdCleaningServices />,
-      link: "https://treatevlar.github.io/TechWeb/", 
+      link: "https://treatevlar.github.io/TechWeb/",
     },
     {
       id: 5,
       title: "Youtube clone",
-      description: "A clone of the popular video-sharing platform with user authentication and video uploads.",
+      description:
+        "A clone of the popular video-sharing platform with user authentication and video uploads.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
       icon: <FaYoutube />,
       link: "https://youtube-clone-keqm.onrender.com",
@@ -76,7 +80,8 @@ const Portfolio = () => {
     {
       id: 6,
       title: "Clothing Website",
-      description: "A modern e-commerce website for showcasing clothing products.",
+      description:
+        "A modern e-commerce website for showcasing clothing products.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
       icon: <GiClothes />,
       link: "https://clothing-website-eqko.onrender.com",
@@ -84,7 +89,8 @@ const Portfolio = () => {
     {
       id: 7,
       title: "Gaming Website",
-      description: "A platform for gamers to find and share their favorite games.",
+      description:
+        "A platform for gamers to find and share their favorite games.",
       technologies: ["React", "TailwindCSS", "JavaScript"],
       icon: <FaGamepad />,
       link: "https://faits-diarmes.onrender.com",
@@ -103,7 +109,8 @@ const Portfolio = () => {
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "A full-featured online store with shopping cart, user authentication, and payment processing.",
+      description:
+        "A full-featured online store with shopping cart, user authentication, and payment processing.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       icon: "fas fa-shopping-cart",
       link: "#",
@@ -111,7 +118,8 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Task Management App",
-      description: "A productivity application for managing tasks with drag-and-drop functionality.",
+      description:
+        "A productivity application for managing tasks with drag-and-drop functionality.",
       technologies: ["React", "Redux", "Firebase", "Tailwind CSS"],
       icon: "fas fa-tasks",
       link: "#",
@@ -119,7 +127,8 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Weather Dashboard",
-      description: "Real-time weather application with forecasts and location-based recommendations.",
+      description:
+        "Real-time weather application with forecasts and location-based recommendations.",
       technologies: ["JavaScript", "API Integration", "Chart.js"],
       icon: "fas fa-cloud-sun",
       link: "#",
@@ -127,7 +136,8 @@ const Portfolio = () => {
     {
       id: 4,
       title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media metrics with data visualization.",
+      description:
+        "Analytics dashboard for social media metrics with data visualization.",
       technologies: ["React", "D3.js", "Express", "MySQL"],
       icon: "fas fa-chart-line",
       link: "#",
@@ -275,8 +285,12 @@ const Portfolio = () => {
       <section id="home" className="gradient-bg pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-           <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
+              <img
+                src="http://images.shiksha.com/mediadata/images/articles/1700477231phpSM3D9W.jpeg"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Kuldeep Kumar
@@ -315,7 +329,11 @@ const Portfolio = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <div className="w-64 h-64 mx-auto mb-6 rounded-full bg-white flex items-center justify-center shadow-xl overflow-hidden">
-                <img src={image} alt="Profile" class="w-full h-full object-cover"/>
+                <img
+                  src="http://images.shiksha.com/mediadata/images/articles/1700477231phpSM3D9W.jpeg"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
@@ -366,7 +384,7 @@ const Portfolio = () => {
             </h3>
 
             {/* Changed grid classes for 2 columns on mobile */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {smallProjects.map((project) => (
                 <div
                   key={project.id}
@@ -500,32 +518,66 @@ const Portfolio = () => {
 
           <div className="flex flex-col md:flex-row gap-12">
             <div className="md:w-1/2">
-              <form ref={form} onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-lg">
-      <div className="mb-6">
-        <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-          Your Name
-        </label>
-        <input type="text" name="name" id="name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required />
-      </div>
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="bg-white p-8 rounded-xl shadow-lg"
+              >
+                <div className="mb-6">
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                    required
+                  />
+                </div>
 
-      <div className="mb-6">
-        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-          Email Address
-        </label>
-        <input type="email" name="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required />
-      </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                    required
+                  />
+                </div>
 
-      <div className="mb-6">
-        <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-          Your Message
-        </label>
-        <textarea name="message" id="message" rows="5" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent" required></textarea>
-      </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                    required
+                  ></textarea>
+                </div>
 
-      <button type="submit" className="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
-        Send Message
-      </button>
-    </form>
+                <button
+                  type="submit"
+                  className="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
 
             <div className="md:w-1/2 text-white">
@@ -565,28 +617,28 @@ const Portfolio = () => {
                 <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://github.com/treatevlar"
                     className="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center hover:bg-indigo-100 transition duration-300"
                   >
-                    <i className="fab fa-github"></i>
+                    <FaGithub />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/feed/?trk=sem-ga_campid.22935434840_asid._crid._kw._d.c_tid._n.x_mt._geo.9302611"
                     className="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center hover:bg-indigo-100 transition duration-300"
                   >
-                    <i className="fab fa-linkedin-in"></i>
+                    <FaLinkedinIn />
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/home?lang=en"
                     className="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center hover:bg-indigo-100 transition duration-300"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <FaTwitter />
                   </a>
                   <a
-                    href="#"
+                    href="https://dribbble.com/"
                     className="w-10 h-10 rounded-full bg-white text-indigo-600 flex items-center justify-center hover:bg-indigo-100 transition duration-300"
                   >
-                    <i className="fab fa-dribbble"></i>
+                    <FaDribbble />
                   </a>
                 </div>
               </div>
